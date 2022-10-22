@@ -5,7 +5,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-require("./module/feed");
+require("./mod1/feed");
 
 // for verbose logging-
 app.use(require("morgan")(process.env.logenv));
@@ -14,7 +14,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // DB Connection
-mongoose.connect("mongodb://127.0.0.1:27017/AtlanTask", {
+mongoose.connect("mongodb://127.0.0.1:27017/TaskByAtlan", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -27,7 +27,7 @@ mongoose.connection
 //endpoints
 app.use(express.static("views"));
 
-app.use(require("./endpoints/index"));
+app.use(require("./endfile/index"));
 
 app.use((err, req, res, next) => {
   console.error(err);
