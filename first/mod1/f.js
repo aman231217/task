@@ -3,7 +3,7 @@ const {
   stop_f,
   err_queue,
   task_done,
-} = require("./queue_init");
+} = require("./queue");
 const task1 = require("./structure/task1");
 
 start_f.process((job) => {
