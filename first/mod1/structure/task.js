@@ -1,7 +1,7 @@
-const mongoosedb = require("mongoose");
+const mongoose = require("mongoose");
 module.exports = mongoosedb.model(
   "task1",
-  new mongoosedb.Schema({
+  new mongoose.Schema({
     task1: String,
     pid: String,
     status: String,
