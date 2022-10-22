@@ -1,8 +1,8 @@
 const mongoosedb = require("mongoose");
 module.exports = mongoosedb.model(
-  "task",
+  "task1",
   new mongoosedb.Schema({
-    task: String,
+    task1: String,
     pid: String,
     status: String,
     timestamp: {
